@@ -1,6 +1,6 @@
 {
   "name": "@mokcj0825/react-date-picker",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A customizable date picker component for React applications with locale support and viewport-aware positioning",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
