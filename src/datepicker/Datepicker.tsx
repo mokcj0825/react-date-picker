@@ -80,12 +80,12 @@ const Datepicker = ({minDate = new Date(0), maxDate, selectedDate, onDateChange,
     navigation: { display: 'flex', alignItems: 'center', gap: '8px' },
     navButton: { display: 'flex', alignItems: 'center', justifyContent: 'center', width: '32px', height: '32px', border: 'none', background: 'transparent', cursor: 'pointer', transition: 'background-color 0.2s' },
     selectors: { display: 'flex', gap: '8px' },
-    yearSelect: { padding: '4px 8px', borderRadius: '4px', borderColor: 'transparent', background: '#F0F0F0', fontSize: '14px' },
-    monthSelect: { padding: '4px 8px', borderRadius: '4px', borderColor: 'transparent', background: '#F0F0F0', fontSize: '14px' },
+    yearSelect: { padding: '4px 8px', borderRadius: '4px', borderColor: 'transparent', background: '#F0F0F0', fontSize: '14px', color: '#000' },
+    monthSelect: { padding: '4px 8px', borderRadius: '4px', borderColor: 'transparent', background: '#F0F0F0', fontSize: '14px', color: '#000' },
     weekdays: { display: 'flex', flexDirection: 'row', borderBottom: '1px solid #aeaeae', justifyContent: 'center' },
     weekday: { textAlign: 'center', fontSize: '12px', fontWeight: '500', color: '#000', margin: '0.166rem', width: '1.7rem', lineHeight: '1.7rem' },
     calendar: { display: 'grid', gridTemplateColumns: 'repeat(7, 1fr)', gap: '2px', backgroundColor: 'white', padding: '8px', borderBottomLeftRadius: '8px', borderBottomRightRadius: '8px' },
-    calendarDay: { display: 'flex', alignItems: 'center', justifyContent: 'center', width: '27.1875px', lineHeight: '27.2px', fontWeight: '400', border: 'none', background: 'transparent', cursor: 'pointer', borderRadius: '4px', fontSize: '12.8px', transition: 'background-color 0.2s' },
+    calendarDay: { display: 'flex', alignItems: 'center', justifyContent: 'center', width: '27.1875px', lineHeight: '27.2px', fontWeight: '400', border: 'none', background: 'transparent', cursor: 'pointer', borderRadius: '4px', fontSize: '12.8px', transition: 'background-color 0.2s', color: '#000' },
     selected: { backgroundColor: '#3b82f6', color: 'white' },
     today: { border: '2px solid #3b82f6' },
     disabled: { color: '#d1d5db', cursor: 'not-allowed' }
@@ -104,6 +104,7 @@ const Datepicker = ({minDate = new Date(0), maxDate, selectedDate, onDateChange,
     monthSelect: { background: '#464646', borderColor: 'transparent', color: 'white' },
     calendar: { backgroundColor: '#464646', color: '#FFFFFF' },
     weekday: { color: '#d1d5db' },
+    calendarDay: { color: '#FFFFFF' },
     disabled: { color: '#4b5563' }
   };
 
@@ -338,14 +339,14 @@ const Datepicker = ({minDate = new Date(0), maxDate, selectedDate, onDateChange,
           }}
           onMouseEnter={(e) => {
             if (!isDisabled && !isSelected) {
-              e.currentTarget.style.backgroundColor = isDarkMode ? '#464646' : '#464646';
-              e.currentTarget.style.color = '#FFFFFF';
+              e.currentTarget.style.backgroundColor = isDarkMode ? '#6b7280' : '#f3f4f6';
+              e.currentTarget.style.color = isDarkMode ? '#FFFFFF' : '#000000';
             }
           }}
           onMouseLeave={(e) => {
             if (!isDisabled && !isSelected) {
               e.currentTarget.style.backgroundColor = 'transparent';
-              e.currentTarget.style.color = '';
+              e.currentTarget.style.color = isDarkMode ? '#FFFFFF' : '#000000';
             }
           }}
         >
@@ -371,14 +372,14 @@ const Datepicker = ({minDate = new Date(0), maxDate, selectedDate, onDateChange,
           style={{ ...appliedStyles.calendarDay, ...(isDisabled ? appliedStyles.disabled : {}), opacity: 0.5 }}
           onMouseEnter={(e) => {
             if (!isDisabled) {
-              e.currentTarget.style.backgroundColor = isDarkMode ? '#464646' : '#464646';
-              e.currentTarget.style.color = '#FFFFFF';
+              e.currentTarget.style.backgroundColor = isDarkMode ? '#6b7280' : '#f3f4f6';
+              e.currentTarget.style.color = isDarkMode ? '#FFFFFF' : '#000000';
             }
           }}
           onMouseLeave={(e) => {
             if (!isDisabled) {
               e.currentTarget.style.backgroundColor = 'transparent';
-              e.currentTarget.style.color = '';
+              e.currentTarget.style.color = isDarkMode ? '#FFFFFF' : '#000000';
             }
           }}
         >
