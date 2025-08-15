@@ -78,7 +78,7 @@ const Datepicker = ({minDate = new Date(0), maxDate, selectedDate, onDateChange,
     dropdown: { position: 'relative', top: '0', left: '0', background: '#F0F0F0', border: '1px solid #d1d5db', borderRadius: '8px', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)', width: '253px', height: 'auto', boxSizing: 'border-box', paddingTop: '8px' },
     header: { display: 'flex', alignItems: 'center', justifyContent: 'space-between', boxSizing: 'border-box', padding: '8px 0', height: '33px' },
     navigation: { display: 'flex', alignItems: 'center', gap: '8px' },
-    navButton: { display: 'flex', alignItems: 'center', justifyContent: 'center', width: '32px', height: '32px', border: 'none', background: 'transparent', cursor: 'pointer', transition: 'background-color 0.2s' },
+    navButton: { display: 'flex', alignItems: 'center', justifyContent: 'center', width: '32px', height: '32px', border: 'none', background: 'transparent', cursor: 'pointer', transition: 'background-color 0.2s', color: '#000' },
     selectors: { display: 'flex', gap: '8px' },
     yearSelect: { padding: '4px 8px', borderRadius: '4px', borderColor: 'transparent', background: '#F0F0F0', fontSize: '14px', color: '#000' },
     monthSelect: { padding: '4px 8px', borderRadius: '4px', borderColor: 'transparent', background: '#F0F0F0', fontSize: '14px', color: '#000' },
@@ -289,14 +289,14 @@ const Datepicker = ({minDate = new Date(0), maxDate, selectedDate, onDateChange,
           style={{ ...appliedStyles.calendarDay, ...(isDisabled ? appliedStyles.disabled : {}), opacity: 0.5 }}
           onMouseEnter={(e) => {
             if (!isDisabled) {
-              e.currentTarget.style.backgroundColor = isDarkMode ? '#464646' : '#464646';
-              e.currentTarget.style.color = '#FFFFFF';
+              e.currentTarget.style.backgroundColor = isDarkMode ? '#6b7280' : '#f3f4f6';
+              e.currentTarget.style.color = isDarkMode ? '#FFFFFF' : '#000000';
             }
           }}
           onMouseLeave={(e) => {
             if (!isDisabled) {
               e.currentTarget.style.backgroundColor = 'transparent';
-              e.currentTarget.style.color = '';
+              e.currentTarget.style.color = isDarkMode ? '#FFFFFF' : '#000000';
             }
           }}
         >
