@@ -1,0 +1,235 @@
+select {
+  background: none;
+  border: none;
+  text-align: center;
+}
+
+.datepicker {
+  position: relative;
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.rhombus {
+  position: absolute;
+  top: -6px;
+  left: 20px;
+  width: 12px;
+  height: 12px;
+  background: #F0F0F0;
+  transform: rotate(45deg);
+  z-index: 1001;
+  border-top: 1px solid #d1d5db;
+  border-left: 1px solid #d1d5db;
+}
+
+.dropdownContainer {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 1000;
+}
+
+.triggerButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  color: #6c6c6c;
+}
+
+.triggerButton:hover {
+  border-color: #9ca3af;
+}
+
+.calendarIcon {
+  color: #6c6c6c;
+}
+
+.dropdown {
+  position: relative;
+  top: 0;
+  left: 0;
+  background: #F0F0F0;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  width: 253px;
+  height: auto;
+  box-sizing: border-box;
+  padding-top: 8px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 8px 0;
+  height: 33px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.navButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.selectors {
+  display: flex;
+  gap: 8px;
+}
+
+.yearSelect,
+.monthSelect {
+  padding: 4px 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background: white;
+  font-size: 14px;
+}
+
+.weekdays {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #aeaeae;
+  justify-content: center;
+}
+
+.weekday {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: #000;
+  margin: 0.166rem;
+  width: 1.7rem;
+  line-height: 1.7rem;
+  
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  background-color: white;
+  padding: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.calendarDay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27.1875px;
+  line-height: 27.2px;
+  font-weight: 400;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 12.8px;
+  transition: background-color 0.2s;
+}
+
+.calendarDay:hover:not(.disabled) {
+  background-color: #464646;
+  color: #FFFFFF;
+}
+
+.selected {
+  background-color: #3b82f6 !important;
+  color: white;
+}
+
+.today {
+  border: 2px solid #3b82f6;
+}
+
+.disabled {
+  color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.disabled:hover {
+  background-color: transparent !important;
+}
+
+/* Dark mode styles */
+[data-theme="dark"] .triggerButton {
+  background: #a5a5a5;
+  border-color: transparent;
+  color: white;
+}
+
+[data-theme="dark"] .calendarIcon {
+  color: white;
+}
+
+[data-theme="dark"] select {
+  color: white;
+}
+
+[data-theme="dark"] .dropdown {
+  background: #464646;
+  border-color: #374151;
+  color: white;
+}
+
+[data-theme="dark"] .rhombus {
+  background: #464646;
+  border-top-color: #374151;
+  border-left-color: #374151;
+}
+
+[data-theme="dark"] .navButton:not(:disabled) {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .yearSelect,
+[data-theme="dark"] .monthSelect {
+  background: #374151;
+  border-color: #4b5563;
+  color: white;
+}
+
+[data-theme="dark"] .calendar {
+  background-color: #464646;
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .calendarDay:hover:not(.disabled) {
+  background-color: #464646;
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .disabled {
+  color: #4b5563;
+}
+
+[data-theme="dark"] .weekday {
+  color: #d1d5db;
+}

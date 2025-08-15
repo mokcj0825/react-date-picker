@@ -1,0 +1,70 @@
+{
+  "name": "@mokcj0825/react-date-picker",
+  "version": "1.0.5",
+  "description": "A customizable date picker component for React applications with locale support and viewport-aware positioning",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "style": "dist/Datepicker.css",
+  "files": [
+    "dist",
+    "src/datepicker/Datepicker.module.css",
+    "src/datepicker/Datepicker.standalone.css",
+    "README.md"
+  ],
+  "keywords": [
+    "react",
+    "datepicker",
+    "date",
+    "calendar",
+    "typescript",
+    "css-modules",
+    "customizable",
+    "locale",
+    "dark-mode"
+  ],
+  "author": "mokcj0825",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mokcj0825/react-date-picker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mokcj0825/react-date-picker/issues"
+  },
+  "homepage": "https://github.com/mokcj0825/react-date-picker#readme",
+  "scripts": {
+    "dev": "vite",
+    "build": "rollup -c",
+    "build:types": "tsc --emitDeclarationOnly",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-terser": "^0.4.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.0",
+    "eslint": "^9.33.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "rollup": "^4.0.0",
+    "rollup-plugin-css-only": "^4.3.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tslib": "^2.6.0",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.39.1",
+    "vite": "^7.1.2"
+  }
+}
