@@ -5,11 +5,8 @@
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
-  "style": "dist/Datepicker.css",
   "files": [
     "dist",
-    "src/datepicker/Datepicker.module.css",
-    "src/datepicker/Datepicker.standalone.css",
     "README.md"
   ],
   "keywords": [

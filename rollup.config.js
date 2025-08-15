@@ -45,18 +45,5 @@ export default [
     ],
     external: ['react', 'react-dom'],
   },
-  {
-    input: 'src/datepicker/Datepicker.standalone.css',
-    output: {
-      file: 'dist/Datepicker.css',
-      format: 'es',
-    },
-    plugins: [
-      postcss({
-        modules: false,
-        extract: true,
-        minimize: true,
-      }),
-    ],
-  }
+
 ];
