@@ -95,7 +95,7 @@ const Datepicker = ({minDate = new Date(0), maxDate, selectedDate, onDateChange,
 
   // Dark mode styles that override the default styles
   const darkModeStyles: Record<string, React.CSSProperties> = {
-    triggerButton: { background: '#a5a5a5', borderColor: 'transparent', color: 'white' },
+    triggerButton: { background: '#464646', borderColor: 'transparent', color: '#a5a5a5' },
     calendarIcon: { color: 'white' },
     dropdown: { background: '#464646', borderColor: '#374151', color: 'white' },
     rhombus: { background: '#464646', borderTopColor: '#374151', borderLeftColor: '#374151' },
